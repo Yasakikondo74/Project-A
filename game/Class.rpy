@@ -1,11 +1,15 @@
 init python:
     class MC:
-        def __init__(self, name, genders, job, money):
+        def __init__(self, name, genders):
             self.name = name
+            self.location = "Home"
             self.Character_selection = 1
             self.genders = genders
-            self.job = job
-            self.money = money
+            self.charisma = 0
+            self.job = "Unemployed"
+            self.income = 5.00
+            self.salery_increase = 1
+            self.money = 0
 
     class girl:
         def __init__(self, name, age, love, type, status):

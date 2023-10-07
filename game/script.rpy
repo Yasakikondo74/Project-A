@@ -27,16 +27,5 @@ label start2:
 
     C "your journey begins here"
 
-    jump Bedroom
-
-    return
-
-label Condition1:
-    $ mc.Character_selection = 1
-    jump start2
-    return
-
-label Condition2:
-    $ mc.Character_selection = 2
-    jump start2
+    jump upgrades
     return
