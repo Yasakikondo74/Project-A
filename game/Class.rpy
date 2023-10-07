@@ -2,6 +2,7 @@ init python:
     class MC:
         def __init__(self, name, genders, job, money):
             self.name = name
+            self.Character_selection = 1
             self.genders = genders
             self.job = job
             self.money = money

@@ -5,6 +5,14 @@
     window hide
     show screen box
     pause
+    return
+
+label start2:
+    hide screen box
+    if mc.Character_selection == 1:
+        show male1 at right
+    elif mc.Character_selection == 2:
+        show male2 at right
 
     unknown "Hello?"
 
@@ -24,9 +32,11 @@
     return
 
 label Condition1:
-    $ Character_selection = 1
+    $ mc.Character_selection = 1
+    jump start2
     return
 
 label Condition2:
-    $ Character_selection = 2
+    $ mc.Character_selection = 2
+    jump start2
     return

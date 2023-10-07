@@ -1,56 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/Screens00.rpy", line 1, in prepare_screen
-    screen box():
-  File "game/Screens00.rpy", line 1, in prepare
-    screen box():
-  File "game/Screens00.rpy", line 3, in prepare
-    button:
-  File "game/Screens00.rpy", line 3, in prepare
-    button:
-  File "game/Screens00.rpy", line 7, in prepare
-    textbutton "Option1" hovered [color "#00ff0d"] unhovered [color "#ffffff"]
-  File "game/Screens00.rpy", line 7, in prepare
-    textbutton "Option1" hovered [color "#00ff0d"] unhovered [color "#ffffff"]
-SyntaxError: invalid syntax (game/Screens00.rpy, line 7)
+While processing the align property of anonymous style:
+  File "game/script.rpy", line 7, in script
+    pause
+  File "renpy/common/000statements.rpy", line 461, in execute_pause
+    renpy.pause()
+IndexError: tuple index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\main.py", line 670, in main
-    run(restart)
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\main.py", line 93, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\screen.py", line 1003, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/Screens00.rpy", line 1, in prepare_screen
-    screen box():
-  File "game/Screens00.rpy", line 1, in prepare
-    screen box():
-  File "game/Screens00.rpy", line 3, in prepare
-    button:
-  File "game/Screens00.rpy", line 3, in prepare
-    button:
-  File "game/Screens00.rpy", line 7, in prepare
-    textbutton "Option1" hovered [color "#00ff0d"] unhovered [color "#ffffff"]
-  File "game/Screens00.rpy", line 7, in prepare
-    textbutton "Option1" hovered [color "#00ff0d"] unhovered [color "#ffffff"]
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\py3analysis.py", line 808, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\py3analysis.py", line 790, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\python.py", line 1088, in py_compile
-    raise e
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\python.py", line 1034, in py_compile
-    raise orig_e
-  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\python.py", line 1027, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/Screens00.rpy, line 7)
+  File "game/script.rpy", line 7, in script
+    pause
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 461, in execute_pause
+    renpy.pause()
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\exports.py", line 1638, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay, pause_modal=modal)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\screen.py", line 481, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 686, in visit_all
+    callback(self)
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1065, in per_interact
+    super(Button, self).per_interact()
+  File "C:\Main\Ren'py\renpy-8.1.3-sdk\renpy\display\layout.py", line 1265, in per_interact
+    size_group = self.style.size_group
+  File "gen3-static/styleclass.pxi", line 525, in renpy.styledata.styleclass.Style.size_group.__get__
+  File "style.pyx", line 493, in renpy.style.StyleCore._get
+  File "style.pyx", line 710, in renpy.style.build_style
+  File "style.pyx", line 707, in renpy.style.build_style
+  File "gen3-static/style_functions.pyx", line 1764, in style_functions.align_property
+  File "include/style_common.pxi", line 30, in style_functions.index_0
+IndexError: tuple index out of range
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.3.23091805
 Project A 1.0
-Sat Sep 30 21:52:19 2023
+Sat Oct  7 18:26:02 2023
