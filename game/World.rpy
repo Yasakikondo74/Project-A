@@ -25,39 +25,17 @@ label show_upgrade:
     pause
     return
 
-label Condition1:
-    $ mc.Character_selection = 1
-    jump start2
-    return
-
-label Condition2:
-    $ mc.Character_selection = 2
-    jump start2
-    return
-
 label upgrade_raw_money:
-    if mc.income == 5:
-        $ mc.income = 10
-    elif mc.income == 10:
-        $ mc.income = 20
-    elif mc.income == 20:
-        $ mc.income = 50
-    elif mc.income == 50:
-        $ mc.income = 100
+    $ mc.upgrade_income()
     jump Location
     return
 
 label upgrade_income:
-    if mc.salery_increase == 1:
-        $ mc.salery_increase = 2
-    elif mc.salery_increase == 2:
-        $ mc.salery_increase = 3
-    elif mc.salery_increase == 3:
-        $ mc.salery_increase = 3
+    $ mc.upgrade_raw_money()
     jump Location
     return
 
 label Bedroom:
-    show bedroom
+    scene bedroom
     pause
     return

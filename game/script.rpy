@@ -3,16 +3,14 @@
     "Choose how would you look like!"
 
     window hide
-    show screen box
+    show screen Character_selection
     pause
+    jump start2
     return
 
 label start2:
-    hide screen box
-    if mc.Character_selection == 1:
-        show male1 at right
-    elif mc.Character_selection == 2:
-        show male2 at right
+    hide screen Character_selection
+    show screen mc
 
     unknown "Hello?"
 
@@ -26,6 +24,6 @@ label start2:
     C "Welcome, [mc.name]!"
 
     C "your journey begins here"
-
+    hide screen mc
     jump upgrades
     return

@@ -10,6 +10,37 @@ init python:
             self.income = 5.00
             self.salery_increase = 1
             self.money = 0
+            self.upgrade_points = 0
+        
+        def Change_character1(self):
+            self.Character_selection = 1
+        
+        def Change_character2(self):
+            self.Character_selection = 2
+
+        def upgrade_income(self):
+            if self.income == 5 and self.upgrade_points >= 1:
+                self.income = 10
+                self.upgrade_points -= 1
+            elif self.income == 10 and self.upgrade_points >= 2:
+                self.income = 20
+                self.upgrade_points -= 1
+            elif self.income == 20 and self.upgrade_points >= 3:
+                self.income = 50
+                self.upgrade_points -= 1
+            elif self.income == 50 and self.upgrade_points >= 4:
+                self.income = 100
+                self.upgrade_points -= 1
+        
+        def upgrade_raw_money(self):
+            if self.salery_increase == 1 and self.upgrade_points >= 1:
+                self.salery_increase = 2
+                self.upgrade_points -= 1
+            elif self.salery_increase == 2 and self.upgrade_points >= 2:
+                self.salery_increase = 3
+                self.upgrade_points -= 1
+
+    mc = MC("Name", "Male")
 
     class girl:
         def __init__(self, name, age, love, type, status):

@@ -1,6 +1,5 @@
 define unknown = Character("???")
 define C = Character("Creator")
-default mc = MC("Name", "Male")
 define you = DynamicCharacter('mc.name', color="#ffffff")
 define exp_gain = 0
 define Location = ""
