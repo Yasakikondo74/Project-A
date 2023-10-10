@@ -6,7 +6,7 @@ init:
 
 screen mc():
     if mc.Character_selection == 1:
-        add "male1.png" at custom_mc_zoom align(1., 1.0)
+        add "male1.png" at custom_mc_zoom align(1.0, 1.0)
     elif mc.Character_selection == 2:
         add "male2.png" at custom_mc_zoom align(1.0, 1.0)
 
@@ -39,7 +39,31 @@ screen upgrades():
         align (0.7, 0.5)
         action Jump("upgrade_income")
         at custom_ui_zoom
-        
+
+screen Location_picker():
+    imagebutton:
+        idle "school.png"
+        hover "school.png"
+        align (0.5,0.2)
+        action SetVariable(mc.location, "School") 
+        at custom_ui_zoom
+    imagebutton:
+        idle "bedroom.png"
+        hover "bedroom.png"
+        align (0.5,0.4)
+        action SetVariable(mc.location, "Home") 
+        at custom_ui_zoom
+    imagebutton:
+        idle "workplace.png"
+        hover "workplace.png"
+        align (0.5,0.6)
+        action SetVariable(mc.location, "Workplace") 
+        at custom_ui_zoom
+    imagebutton:
+        idle "Confirm.png"
+        hover "Confirm.png"
+        align (0.5, 0.8)
+        action Jump("Location")
 
 screen Character_selection():
     # First option

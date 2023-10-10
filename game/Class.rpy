@@ -4,7 +4,7 @@ init python:
             self.name = name
             self.location = "Home"
             self.Character_selection = 1
-            self.genders = genders
+            self.genders = "Male"
             self.charisma = 0
             self.job = "Unemployed"
             self.income = 5.00
@@ -40,7 +40,7 @@ init python:
                 self.salery_increase = 3
                 self.upgrade_points -= 1
 
-    mc = MC("Name", "Male")
+    mc = MC("Player")
 
     class girl:
         def __init__(self, name, age, love, type, status):
