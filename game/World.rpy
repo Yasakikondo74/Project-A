@@ -1,8 +1,13 @@
 label Location:
+    hide screen blank
+    hide screen Location_picker
+    hide screen button_to_upgrades
     hide screen back
     hide screen upgrades
+    show screen blank
+    show screen Location_picker
     show screen button_to_upgrades
-    if mc.location == "Home":
+    if mc.location == "Bedroom":
         show bedroom
         jump Bedroom
     elif mc.location == "School":
@@ -36,6 +41,13 @@ label upgrade_income:
     return
 
 label Bedroom:
-    scene bedroom
+    scene bedroom_hover
+    show screen blank
     pause
-    return
+    return Jump("Location")
+
+label School:
+    scene school_hover
+    show screen blank
+    pause
+    return Jump("Location")

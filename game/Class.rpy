@@ -1,8 +1,8 @@
 init python:
     class MC:
-        def __init__(self, name, genders):
-            self.name = name
-            self.location = "Home"
+        def __init__(self):
+            self.name = "Player"
+            self.location = "Bedroom"
             self.Character_selection = 1
             self.genders = "Male"
             self.charisma = 0
@@ -12,9 +12,15 @@ init python:
             self.money = 0
             self.upgrade_points = 0
         
+        def Location_bed(self):
+            self.location = "Bedroom"
+        def Location_school(self):
+            self.location = "School"
+        def Location_workplace(self):
+            self.location = "Workplace"
+
         def Change_character1(self):
             self.Character_selection = 1
-        
         def Change_character2(self):
             self.Character_selection = 2
 
@@ -40,7 +46,7 @@ init python:
                 self.salery_increase = 3
                 self.upgrade_points -= 1
 
-    mc = MC("Player")
+    mc = MC()
 
     class girl:
         def __init__(self, name, age, love, type, status):

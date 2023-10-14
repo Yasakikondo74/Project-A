@@ -5,7 +5,6 @@
     window hide
     show screen Character_selection
     pause
-    jump start2
     return
 
 label start2:
